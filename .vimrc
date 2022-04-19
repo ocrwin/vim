@@ -21,19 +21,25 @@ set ignorecase
 set noswapfile
 set completeopt=longest,menuone
 
-" Gruvbox
-set background=dark
+" Disable annoying beeping
+set noerrorbells
+set vb t_vb=
+
+" Font
+set guifont=Inconsolata\ for\ Powerline:h14
+
+" Theme
+"set background=dark
 colorscheme gruvbox
+highlight Comment gui=NONE
 
 " Airline
-let g:airline_left_sep= '░'
-let g:airline_right_sep= '░'
-
+let g:airline_powerline_fonts = 1
 " Airline theme
 let g:airline_theme='gruvbox'
 
 " NerdTree
-map <LEADER>f :NERDTreeToggle<CR>
+map <F2> :NERDTreeToggle<CR>
 let g:NERDTreeWinSize = 24
 let g:NERDTreeMinimalUI = 1
 "autocmd VimEnter * if (0 == argc()) | NERDTree | endif
